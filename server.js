@@ -27,17 +27,7 @@ app.use(passport.initialize());
 
 var router = express.Router();
 
-function getJSONObjectForMovieRequirement(req) {
-    var json = {
-        headers: "No headers",
-        key: process.env.UNIQUE_KEY,
-        body: "No body"
-    };
-    if (req.headers != null) {
-        json.headers =req.headers;
-    }
-    return json;
-}
+
 router.post('/signup', function(req,res){
 
     if (!req.body.username || !req.body.password) {
