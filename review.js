@@ -1,16 +1,11 @@
-require('dotenv').config({path:envPath});
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../server');
-let User = require('../Users');
-
-
-chai.should();
-
-chai.use(chaiHttp);
-
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var bcrypt = require('bcrypt-nodejs');
+
+mongoose.Promise = global.Promise;
+
+mongoose.connect(process.env.DB, { useNewUrlParser: true });
+
 
 try {
     mongoose.connect( process.env.DB, {useNewUrlParser: true, useUnifiedTopology: true}, () =>
@@ -22,8 +17,8 @@ try {
 //review schema
 var ReviewSchema = new Schema({
     name: { type: String, required: true, index: { unique: true }},
-    quote: {type: string, required: true, index: {unique: true}},
-    rating: {type: string, required: true, index: {unique: true}},
+    quote: { type: String, required: true },
+    rating: { type: Number, min: [1, 'Must be greater than 0'], max: [5, 'Must be less than 6']},
 
 });
 
