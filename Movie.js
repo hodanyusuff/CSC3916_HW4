@@ -17,8 +17,8 @@ try {
 var MovieSchema = new Schema({
     title: { type: String, required: true, index: { unique: true }},
     releaseDate: { type: Number, min: [1900, 'Must be greater than 1899'], max: [2100, 'Must be less than 2100']},
-    genre: {type: string, required: true, index: {unique: true}},
-    actors: {type: string, required: true, index: {unique: true}},
+    genre: {type: String, required: true, index: {unique: true}},
+    actors: {type: String, required: true, index: {unique: true}},
 
 });
 
