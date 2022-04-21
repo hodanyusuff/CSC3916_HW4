@@ -1,5 +1,5 @@
 {
-  "name": "hw3week-7",
+  "name": "CSC3916_HW4",
   "version": "1.0.0",
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
@@ -29,9 +29,9 @@
   "author": "Hodan Yusuf",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hodanyusuff/hw3.week-7.git/issues"
+    "url": "https://github.com/hodanyusuff/CSC3916_HW4.git/issues"
   },
-  "homepage": "https://github.com/hodanyusuff/hw3.week-7#readme",
+  "homepage": "https://github.com/hodanyusuff/CSC3916_HW4#readme",
   "devDependencies": {
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
